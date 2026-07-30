@@ -1,16 +1,21 @@
-import { Recycle, Cog, CloudRain, Cpu, Droplets, Sun } from 'lucide-react';
+import {
+  Recycle,
+  Cog,
+  CloudRain,
+  Cpu,
+  Droplets,
+  Sun,
+  Building2,
+} from 'lucide-react';
 
-/**
- * Each entry powers two surfaces:
- *  - the Navbar dropdown (icon, label, desc, to)
- *  - the /services page (meaning, impact, examples, image)
- *
- * Impact figures are drawn from public research:
- *  World Bank "What a Waste" / UNEP Global Waste Management Outlook 2024,
- *  the UN Global E-waste Monitor 2024 (UNITAR/ITU),
- *  the Central Ground Water Board (CGWB) Dynamic Ground Water Resources reports,
- *  and CPCB sewage treatment performance data.
- */
+import solidImg from '../assets/services/solid.png';
+import machinesImg from '../assets/services/machines.png';
+import rainImg from '../assets/services/rain.png';
+import ewasteImg from '../assets/services/ewaste.png';
+import etpImg from '../assets/services/etp.png';
+import municipalImg from '../assets/services/municipal.png';
+import solarImg from '../assets/services/solar.png';
+
 export const servicesMenu = [
   {
     id: 1,
@@ -20,8 +25,7 @@ export const servicesMenu = [
     tag: 'Municipal & Industrial',
     desc: 'Municipal & industrial collection, sorting, disposal',
     to: '/services/solid-waste-management',
-    image:
-      'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=900&q=80&auto=format&fit=crop',
+    image:solidImg,
     alt: 'Industrial solid waste management and sorting facility',
     meaning:
       'The systematic collection, segregation, treatment, and disposal of everyday waste from households, municipalities, and industry — designed to keep material out of landfills and back into use wherever possible.',
@@ -66,8 +70,7 @@ export const servicesMenu = [
     tag: 'Infrastructure',
     desc: 'Shredders, sorting lines & maintenance',
     to: '/services/machineries-equipments',
-    image:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=80&auto=format&fit=crop',
+    image: machinesImg,
     alt: 'Heavy-duty industrial machinery and recycling equipment',
     meaning:
       'Supply, installation, and upkeep of the heavy machinery that makes recycling possible at scale — shredders, balers, conveyors, and sensor-based sorters that turn mixed waste streams into clean, separated material.',
@@ -112,8 +115,7 @@ export const servicesMenu = [
     tag: 'Water Conservation',
     desc: 'Catchment, recharge & filtration systems',
     to: '/services/rain-water-harvesting',
-    image:
-      'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900&q=80&auto=format&fit=crop',
+    image: rainImg,
     alt: 'Rainwater harvesting and water filtration setup',
     meaning:
       'Capturing rainfall — mostly rooftop runoff — and channelling it into storage or back into the ground, so every monsoon adds to the water table instead of running off into drains.',
@@ -158,8 +160,7 @@ export const servicesMenu = [
     tag: 'Core Service',
     desc: 'Secure pickup, dismantling & recovery',
     to: '/services/e-waste-management',
-    image:
-      'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=900&q=80&auto=format&fit=crop',
+    image:ewasteImg,
     alt: 'E-waste collection and recycling management facility',
     meaning:
       'End-to-end handling of discarded electronics — anything with a plug or battery — from secure pickup through certified dismantling to the recovery of metals and materials locked inside.',
@@ -204,8 +205,7 @@ export const servicesMenu = [
     tag: 'Water Treatment',
     desc: 'Effluent, sewage & water treatment plants',
     to: '/services/etp-stp-wtp-solutions',
-    image:
-      'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=900&q=80&auto=format&fit=crop',
+    image:etpImg,
     alt: 'Industrial water treatment plant and purification systems',
     meaning:
       'Design, installation, and operation of Effluent, Sewage, and Water Treatment Plants that clean industrial and municipal wastewater to safe discharge — or reuse — standards.',
@@ -250,8 +250,7 @@ export const servicesMenu = [
     tag: 'Renewable Energy',
     desc: 'Thermal collectors, SPV systems & energy solutions',
     to: '/services/solar-water-heater',
-    image:
-      'https://images.unsplash.com/photo-1509391365360-e445037d8012?w=900&q=80&auto=format&fit=crop',
+    image:solarImg,
     alt: 'Solar water heater and photovoltaic panels installed on a rooftop',
     meaning:
       'The supply, installation, and integration of sustainable thermal solar water heaters and Solar Photovoltaic (SPV) systems — transforming abundant sunlight directly into hot water and clean electricity for residential, commercial, and industrial operations.',
@@ -288,4 +287,88 @@ export const servicesMenu = [
       'Agricultural and dairy sanitation operations',
     ],
   },
+{
+  id: 7,
+  slug: 'municipal-waste-management',
+  icon: Building2,
+  label: 'Municipal Waste Management',
+  tag: 'Smart Cities',
+  desc: 'Collection, transportation, recycling & scientific disposal',
+  to: '/services/municipal-waste-management',
+  image: municipalImg,
+  alt: 'Municipal waste collection and processing facility',
+
+  meaning:
+    'Municipal Waste Management is the organized collection, transportation, segregation, recycling, treatment, and scientific disposal of waste generated by households, commercial establishments, institutions, and public places. It ensures cleaner cities, protects public health, conserves natural resources, and minimizes environmental pollution through sustainable waste management practices.',
+
+  impact: [
+    {
+      value: '2.24B → 3.88B',
+      label:
+        'Tonnes of municipal solid waste generated globally per year by 2050 (World Bank)',
+    },
+    {
+      value: '55%',
+      label:
+        'Global population currently living in urban areas generating municipal waste',
+    },
+    {
+      value: '70%',
+      label:
+        'Increase in municipal waste generation expected by 2050 without intervention',
+    },
+  ],
+
+  examples: [
+    'Door-to-door household waste collection and transportation',
+    'Material Recovery Facilities (MRFs) for recyclable segregation',
+    'Organic waste composting and biomethanation plants',
+    'Scientific sanitary landfill and waste-to-energy facilities',
+  ],
+
+  metrics: ['Smart Collection', 'Resource Recovery', 'Clean City'],
+
+  stat: {
+    value: '100%',
+    label: 'Scientific Disposal',
+  },
+
+  causes: [
+    'Rapid urbanization and population growth',
+    'Increasing household and commercial waste generation',
+    'Poor segregation of waste at source',
+    'Limited recycling and processing infrastructure',
+  ],
+
+  benefits: [
+    {
+      title: 'Cleaner Cities',
+      description:
+        'Efficient waste collection prevents littering, improves sanitation, and enhances urban aesthetics.',
+    },
+    {
+      title: 'Resource Recovery',
+      description:
+        'Segregated recyclable materials are recovered and reintroduced into manufacturing supply chains.',
+    },
+    {
+      title: 'Environmental Protection',
+      description:
+        'Scientific treatment minimizes landfill usage, groundwater contamination, and greenhouse gas emissions.',
+    },
+    {
+      title: 'Public Health',
+      description:
+        'Proper waste management reduces disease vectors, foul odors, and environmental pollution.',
+    },
+  ],
+
+  usage: [
+    'Municipal Corporations & Smart Cities',
+    'Urban Local Bodies',
+    'Residential Townships & Housing Societies',
+    'Commercial Markets & Business Districts',
+    'Public Institutions & Government Facilities',
+  ],
+}
 ];

@@ -44,11 +44,15 @@ export default function ServiceDetail() {
     <div className="bg-white pt-[88px]">
       {/* ================= EDITORIAL HERO ================= */}
       <section className="relative overflow-hidden border-b border-gray-100">
-        <div className="absolute inset-0">
-          <img src={service.image} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
-        </div>
+        <div className="absolute inset-0 bg-gray-50">
+  <img
+    src={service.image}
+    alt=""
+    className="w-full h-full object-contain object-right"
+  />
+  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/20" />
+  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+</div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-12 pb-20 relative z-10">
           <Link
@@ -134,10 +138,13 @@ export default function ServiceDetail() {
           <div className="min-w-0">
             {/* Overview — image */}
             <div id="overview" className="scroll-mt-28 mb-20">
-              <div className="relative h-64 lg:h-80 rounded-2xl overflow-hidden">
-                <img src={service.image} alt={service.alt} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
+              <div className="relative rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center min-h-[420px]">
+  <img
+    src={service.image}
+    alt={service.alt}
+    className="max-w-full max-h-[420px] object-contain"
+  />
+</div>
             </div>
 
             {/* Why It Matters — impact stats */}

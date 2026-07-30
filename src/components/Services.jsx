@@ -1,12 +1,20 @@
 import { ArrowUpRight } from 'lucide-react';
 
+import solidImg from '../assets/services/solid.png';
+import machinesImg from '../assets/services/machines.png';
+import rainImg from '../assets/services/rain.png';
+import ewasteImg from '../assets/services/ewaste.png';
+import etpImg from '../assets/services/etp.png';
+import municipalImg from '../assets/services/municipal.png';
+import solarImg from '../assets/services/solar.png';
+
 const services = [
   {
     id: 1,
     title: 'Solid Waste Management',
     description:
       'Comprehensive municipal and industrial solid waste collection, sorting, processing, and sustainable disposal solutions.',
-    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&q=80&auto=format&fit=crop',
+    image: solidImg,
     alt: 'Industrial solid waste management and sorting facility',
     tag: 'Municipal & Industrial',
     metrics: ['Zero Waste', 'High Recovery', 'Eco Processing'],
@@ -16,7 +24,7 @@ const services = [
     title: 'Machineries & Equipments',
     description:
       'State-of-the-art heavy-duty recycling machines, shredders, sorting conveyors, and processing equipment supply and maintenance.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80&auto=format&fit=crop',
+    image: machinesImg,
     alt: 'Heavy-duty industrial machinery and recycling equipment',
     tag: 'Infrastructure',
     metrics: ['Heavy Duty', 'Automated', 'Reliable Tech'],
@@ -26,7 +34,7 @@ const services = [
     title: 'Rain Water Harvesting',
     description:
       'Advanced rainwater capture, filtration, recharge structures, and conservation systems for sustainable water resource management.',
-    image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80&auto=format&fit=crop',
+    image: rainImg,
     alt: 'Rainwater harvesting and water filtration setup',
     tag: 'Water Conservation',
     metrics: ['Smart Filtration', 'Eco Capture', 'Sustainable'],
@@ -36,7 +44,7 @@ const services = [
     title: 'E-Waste Management',
     description:
       'End-to-end collection, segregation, dismantling, refurbishing, recycling, and refining of electronic scrap and IT assets.',
-    image: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=600&q=80&auto=format&fit=crop',
+    image: ewasteImg,
     alt: 'E-waste collection and recycling management facility',
     tag: 'Core Service',
     metrics: ['Secure Pickup', 'Certified', 'Safe Disposal'],
@@ -46,11 +54,31 @@ const services = [
     title: 'ETP / STP / WTP Solutions',
     description:
       'Design, installation, and management of Effluent Treatment Plants, Sewage Treatment Plants, and Water Treatment Plants.',
-    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80&auto=format&fit=crop',
+    image: etpImg,
     alt: 'Industrial water treatment plant and purification systems',
     tag: 'Water Treatment',
     metrics: ['Zero Liquid Discharge', 'Pure Output', 'Compliant'],
   },
+  {
+    id: 6,
+    title: 'Municipal Waste Management',
+    description:
+      'Integrated municipal waste collection, segregation, transportation, processing, recycling, and scientific disposal solutions for cleaner and sustainable cities.',
+    image: municipalImg,
+    alt: 'Municipal waste management and collection system',
+    tag: 'Smart Cities',
+    metrics: ['Door-to-Door', 'Recycling', 'Clean City'],
+  },
+{
+  id: 7,
+  title: 'Solar Water Heater & SVP',
+  description:
+    'Energy-efficient solar water heating systems and SVP solutions designed to reduce energy consumption while supporting sustainable water management.',
+  image: solarImg,
+  alt: 'Solar water heater and SVP solution',
+  tag: 'Renewable Energy',
+  metrics: ['Solar Powered', 'Energy Saving', 'Eco Friendly'],
+},
 ];
 
 export default function Services() {
@@ -83,12 +111,12 @@ export default function Services() {
               className="group premium-card overflow-hidden flex flex-col cursor-pointer"
             >
               {/* Image */}
-              <div className="relative h-52 overflow-hidden rounded-t-[20px]">
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <div className="relative h-64 bg-gray-50 rounded-t-[20px] overflow-hidden flex items-center justify-center">
+  <img
+    src={service.image}
+    alt={service.alt}
+    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+  />
                 <div className="absolute inset-0 img-overlay" />
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-semibold rounded-full">

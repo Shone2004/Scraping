@@ -61,17 +61,17 @@ export default function Navbar() {
         scrolled ? 'bg-white/95 backdrop-blur-xl shadow-[0_1px_32px_rgba(0,0,0,0.07)] border-b border-gray-100/80' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-8 lg:px-8">
-          <div className="flex items-center justify-between h-[88px]">
+          <div className="flex items-center justify-between h-[96px]">
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center shadow-green-sm group-hover:scale-105 transition-transform duration-200">
-                <img
-                  src={logo}
-                  alt="Verdant Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center shadow-green-sm group-hover:scale-105 transition-transform duration-200">
+  <img
+    src={logo}
+    alt="Verdant Logo"
+    className="w-full h-full object-contain"
+  />
+</div>
               <div className="leading-tight">
                 <p className="text-[17px] font-black text-gray-900 tracking-tight">Verdant</p>
                 <p className="text-[10px] font-bold text-brand-600 uppercase tracking-[.12em]">Salvage Bharat pvt. ltd.</p>
