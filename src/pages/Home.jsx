@@ -9,11 +9,13 @@ import CaseStudies from '../components/CaseStudies';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
 import IndustriesSmall from '../components/IndustriesSmall';
+import Partners from '../components/Partners';
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 antialiased">
         <Hero />
+        <Partners />
         <Statistics />
         <Services />
         <IndustriesSmall />
