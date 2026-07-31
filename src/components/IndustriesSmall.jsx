@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Award } from 'lucide-react';
 import tataImg from '../assets/industry/tata.webp';
 import zomatoImg from '../assets/industry/zomato.webp';
 import hindalcoImg from '../assets/industry/hindalco.webp';
-import gazeboImg from '../assets/industry/gazebo.webp';
+import gazeboImg from '../assets/industry/hotel.png';
 import neralImg from '../assets/industry/neral.webp';
 
 const logos = [
@@ -50,34 +50,36 @@ const logos = [
     description: 'Tracking heavy metal byproducts, automated ETP telemetry logs, and industrial scrap recovery rates.',
     icon: TrendingUp,
   },
-  {
-    name: 'Gazebo Hotel',
-    logoUrl: gazeboImg,
-    logoClass: 'scale-85',
-    tagline: 'Hospitality Services',
-    badge: 'Greywater Reuse',
-    stat: '40% Water Saved',
-    accent: 'from-cyan-500 via-cyan-600 to-teal-600',
-    accentLight: 'from-cyan-50 to-teal-50',
-    accentBg: 'bg-cyan-500/10',
-    badgeColor: 'from-cyan-600 to-teal-600',
-    description: 'Deploying smart organic waste composting units and centralized solar water heating telemetry.',
-    icon: Sparkles,
-  },
-  {
-    name: 'Neral Grampanchayat',
-    logoUrl: neralImg,
-    logoClass: 'scale-95',
-    tagline: 'Local Municipal Body',
-    badge: 'Smart Ward Mapping',
-    stat: '100% Digital Logs',
-    accent: 'from-emerald-500 via-emerald-600 to-green-600',
-    accentLight: 'from-emerald-50 to-green-50',
-    accentBg: 'bg-emerald-500/10',
-    badgeColor: 'from-emerald-600 to-green-600',
-    description: 'Digitalizing door-to-door solid waste collection tracking, rainwater harvesting data, and sanitation audits.',
-    icon: Award,
-  },
+{
+  name: 'Gazebo Hotel',
+  logoUrl: gazeboImg,
+  logoClass: 'scale-90',
+  tagline: 'Hospitality',
+  badge: 'Organic Waste Management',
+  stat: '100% Sustainable',
+  accent: 'from-amber-500 via-orange-500 to-yellow-500',
+  accentLight: 'from-amber-50 to-yellow-50',
+  accentBg: 'bg-amber-500/10',
+  badgeColor: 'from-amber-500 to-orange-500',
+  description:
+    'Providing waste collection and organic waste processing solutions for hotels through composting and sustainable waste management.',
+  icon: Award,
+},
+{
+  name: 'Neral Grampanchayat',
+  logoUrl: neralImg,
+  logoClass: 'scale-95',
+  tagline: 'Local Municipal Body',
+  badge: 'Zero Dumping Plant',
+  stat: '100% Digital Logs',
+  accent: 'from-emerald-500 via-emerald-600 to-green-600',
+  accentLight: 'from-emerald-50 to-green-50',
+  accentBg: 'bg-emerald-500/10',
+  badgeColor: 'from-emerald-600 to-green-600',
+  description:
+    'Supporting a Zero Dumping Plant through door-to-door waste collection, segregation, composting, and sustainable organic waste management.',
+  icon: Award,
+},
 ];
 
 export default function IndustriesSmall() {

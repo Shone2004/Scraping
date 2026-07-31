@@ -4,7 +4,7 @@ import React from 'react';
 import tataImg from '../assets/industry/tata.webp';
 import zomatoImg from '../assets/industry/zomato.webp';
 import hindalcoImg from '../assets/industry/hindalco.webp';
-import gazeboImg from '../assets/industry/gazebo.webp';
+import gazeboImg from '../assets/industry/hotel.png';
 import neralImg from '../assets/industry/neral.webp';
 
 const partners = [

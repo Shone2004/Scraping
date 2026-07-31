@@ -62,51 +62,72 @@ export const servicesMenu = [
       'Construction & event-site cleanup',
     ],
   },
-  {
-    id: 2,
-    slug: 'machineries-equipments',
-    icon: Cog,
-    label: 'Machineries & Equipments',
-    tag: 'Infrastructure',
-    desc: 'Shredders, sorting lines & maintenance',
-    to: '/services/machineries-equipments',
-    image: machinesImg,
-    alt: 'Heavy-duty industrial machinery and recycling equipment',
-    meaning:
-      'Supply, installation, and upkeep of the heavy machinery that makes recycling possible at scale — shredders, balers, conveyors, and sensor-based sorters that turn mixed waste streams into clean, separated material.',
-    impact: [
-      { value: '$654M → $1.25B', label: "India's recycling equipment market, 2024 projected to 2035" },
-      { value: '85%', label: 'Recovery rate achievable for aluminium and PET on modern sorting lines' },
-      { value: '8.6%', label: "CAGR of India's waste-sorting equipment market through 2030" },
-    ],
-    examples: [
-      'Shredders and granulators for plastic, rubber, and industrial scrap',
-      'Balers for cardboard, paper, and ferrous metal scrap',
-      'Optical and near-infrared sorters for high-speed material separation',
-      'Mobile crushers for construction and demolition debris',
-    ],
-    metrics: ['Heavy Duty', 'Automated', 'Reliable Tech'],
-    stat: { value: '24/7', label: 'Uptime support' },
-    causes: [
-      'Manual sorting can\'t keep pace with rising waste volumes',
-      'Inconsistent material purity when processing is done by hand',
-      'Worker safety risks in unmechanized handling of sharp or heavy scrap',
-      'Growing complexity of mixed streams like multi-layer plastics and e-waste',
-    ],
-    benefits: [
-      { title: 'Higher throughput', description: 'Mechanized lines process far more tonnage per shift than manual sorting alone.' },
-      { title: 'Cleaner output', description: 'Optical and sensor-based sorting improves material purity, which raises resale value.' },
-      { title: 'Safer operations', description: 'Automation removes workers from the most hazardous points of contact with raw waste.' },
-      { title: 'Lower cost per tonne', description: 'Well-maintained equipment reduces the long-run operating cost of processing capacity.' },
-    ],
-    usage: [
-      'Material Recovery Facilities (MRFs)',
-      'Scrap metal & plastic recycling units',
-      'Construction & demolition waste yards',
-      'Composting & organic waste facilities',
-      'E-waste dismantling lines',
-    ],
-  },
+{
+  id: 2,
+  slug: 'organic-waste-processing-machinery',
+  icon: Cog,
+  label: 'Organic Waste Processing Machinery',
+  tag: 'Infrastructure',
+  desc: 'Machinery for composting and organic waste processing',
+  to: '/services/organic-waste-processing-machinery',
+  image: machinesImg,
+  alt: 'Organic waste processing and composting machinery',
+  meaning:
+    'Supply, installation, and maintenance of machinery used to process food and biodegradable waste into nutrient-rich compost (organic manure). Our solutions include shredders, trommel screens, composting systems, curing units, and material handling equipment designed for efficient organic waste management.',
+
+  impact: [
+    { value: '70%', label: 'Municipal waste can be biodegradable and suitable for composting' },
+    { value: '90%', label: 'Reduction in landfill waste through efficient organic waste processing' },
+    { value: '24/7', label: 'Reliable machinery support and maintenance' },
+  ],
+
+  examples: [
+    'Organic Waste Converter (OWC) machines',
+    'Food waste shredders',
+    'Composting and curing systems',
+    'Trommel screening machines',
+    'Bagging and compost handling equipment',
+  ],
+
+  metrics: ['Eco-Friendly', 'Composting', 'Reliable Performance'],
+
+  stat: { value: '24/7', label: 'Service & Maintenance Support' },
+
+  causes: [
+    'Large quantities of food and biodegradable waste end up in landfills',
+    'Manual waste handling is slow and labour-intensive',
+    'Improper disposal leads to foul odour and greenhouse gas emissions',
+    'Lack of efficient processing reduces the recovery of valuable organic resources',
+  ],
+
+  benefits: [
+    {
+      title: 'Produces Organic Compost',
+      description: 'Converts biodegradable waste into nutrient-rich organic manure suitable for agriculture and landscaping.',
+    },
+    {
+      title: 'Reduces Landfill Waste',
+      description: 'Minimizes the amount of food and organic waste sent to landfills.',
+    },
+    {
+      title: 'Environment Friendly',
+      description: 'Reduces methane emissions and supports sustainable waste management.',
+    },
+    {
+      title: 'Efficient Processing',
+      description: 'Automated machinery speeds up compost production while reducing labour requirements.',
+    },
+  ],
+
+  usage: [
+    'Municipal composting facilities',
+    'Hotels & restaurants',
+    'Housing societies',
+    'Food processing industries',
+    'Markets & vegetable mandis',
+    'Institutions & campuses',
+  ],
+},
   {
     id: 3,
     slug: 'rain-water-harvesting',

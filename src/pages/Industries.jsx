@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Award, Sparkles } from 'lucide-react';
 import tataImg from '../assets/industry/tata.webp';
 import zomatoImg from '../assets/industry/zomato.webp';
 import hindalcoImg from '../assets/industry/hindalco.webp';
-import gazeboImg from '../assets/industry/gazebo.webp';
+import gazeboImg from '../assets/industry/hotel.png';
 import neralImg from '../assets/industry/neral.webp';
 
 const detailedIndustries = [
@@ -62,42 +62,58 @@ const detailedIndustries = [
       'Maximized recovery value from industrial scrap metal and production byproducts',
     ],
   },
-  {
-    id: 'government-agencies',
-    name: 'Gazebo Hotel',
-    logoUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=250&auto=format&fit=crop&q=80',
-    tagline: 'Hospitality Services',
-    badge: 'Greywater Reuse',
-    stat: '40% Water Saved',
-    category: 'Hospitality & Tourism',
-    image: gazeboImg,
-    description: 'Deploying smart organic waste composting units and centralized solar water heating telemetry for premium resort and hotel operations.',
-    contribution: 'Transformed daily hospitality waste management, reducing municipal water consumption by 40% through intelligent greywater recycling systems.',
-    metrics: ['40% Water Saved', 'Smart Composting', 'Solar Thermal Integration'],
-    benefits: [
-      'Decentralized wastewater treatment monitoring and automated greywater reuse',
-      'Optimized thermal energy tracking for guest hot water supply lines',
-      'Streamlined kitchen organic waste sorting and local composting conversion',
-    ],
-  },
-  {
-    id: 'waste-to-energy',
-    name: 'Neral Grampanchayat',
-    logoUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=250&auto=format&fit=crop&q=80',
-    tagline: 'Local Municipal Body',
-    badge: 'Smart Ward Mapping',
-    stat: '100% Digital Logs',
-    category: 'Municipal & Public Infrastructure',
-    image: neralImg,
-    description: 'Digitalizing door-to-door solid waste collection tracking, rainwater harvesting databases, and community sanitation audit logs.',
-    contribution: 'Replaced traditional paper registries with cloud-based ward mapping, elevating local collection transparency and citizen accountability by 90%.',
-    metrics: ['Smart Ward Mapping', 'Monsoon Recharge Logs', 'Citizen Transparency'],
-    benefits: [
-      'Live tracking interface for rural and semi-urban sanitation collection fleets',
-      'Groundwater level analytics and seasonal rainwater harvesting databases',
-      'Transparent scoring matrices for community public health audits',
-    ],
-  },
+{
+  id: 'government-agencies',
+  name: 'Gazebo Hotel',
+  logoUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=250&auto=format&fit=crop&q=80',
+  tagline: 'Hospitality Services',
+  badge: 'Waste Collection Point',
+  stat: '100% Waste Segregation',
+  category: 'Hospitality & Tourism',
+  image: gazeboImg,
+  description:
+    'Providing dedicated waste collection points, source segregation, organic waste composting, and solar water heating solutions for sustainable hotel operations.',
+  contribution:
+    'Established an efficient waste collection system with designated collection points, enabling proper segregation, organic waste composting, and environmentally responsible waste management throughout the hotel premises.',
+  metrics: [
+    'Waste Collection Point',
+    'Organic Waste Composting',
+    'Solar Water Heating',
+  ],
+  benefits: [
+    'Dedicated waste collection points for efficient waste segregation',
+    'Door-to-door collection and handling of hotel waste',
+    'Kitchen organic waste converted into nutrient-rich compost',
+    'Solar water heating systems for energy-efficient hot water supply',
+    'Cleaner, greener, and sustainable hotel operations',
+  ],
+},
+{
+  id: 'waste-to-energy',
+  name: 'Neral Grampanchayat',
+  logoUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=250&auto=format&fit=crop&q=80',
+  tagline: 'Local Municipal Body',
+  badge: 'Zero Dumping Plant',
+  stat: '100% Sustainable Operations',
+  category: 'Municipal & Public Infrastructure',
+  image: neralImg,
+  description:
+    'Implementing a Zero Dumping Plant through door-to-door waste collection, source segregation, organic waste processing, compost production, and environmentally responsible disposal practices.',
+  contribution:
+    'Established a Zero Dumping Plant by streamlining waste collection, segregation, composting, and scientific processing, significantly reducing landfill dependency while promoting sustainable waste management.',
+  metrics: [
+    'Zero Dumping Plant',
+    'Organic Waste Processing',
+    'Scientific Waste Management',
+  ],
+  benefits: [
+    'Door-to-door collection of municipal solid waste',
+    'Source segregation of wet and dry waste',
+    'Conversion of organic waste into nutrient-rich compost (organic manure)',
+    'Reduced landfill dependency through scientific waste processing',
+    'Cleaner villages with environmentally sustainable waste management',
+  ],
+},
 ];
 
 export default function IndustriesPage() {

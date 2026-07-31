@@ -19,16 +19,16 @@ const services = [
     tag: 'Municipal & Industrial',
     metrics: ['Zero Waste', 'High Recovery', 'Eco Processing'],
   },
-  {
-    id: 2,
-    title: 'Machineries & Equipments',
-    description:
-      'State-of-the-art heavy-duty recycling machines, shredders, sorting conveyors, and processing equipment supply and maintenance.',
-    image: machinesImg,
-    alt: 'Heavy-duty industrial machinery and recycling equipment',
-    tag: 'Infrastructure',
-    metrics: ['Heavy Duty', 'Automated', 'Reliable Tech'],
-  },
+{
+  id: 2,
+  title: 'Organic Waste Processing Machinery',
+  description:
+    'Advanced machinery for processing food and organic waste into high-quality compost (organic manure), including shredders, composting units, trommels, and screening equipment.',
+  image: machinesImg,
+  alt: 'Organic waste processing and composting machinery',
+  tag: 'Infrastructure',
+  metrics: ['Eco-Friendly', 'Composting', 'Reliable Performance'],
+},
   {
     id: 3,
     title: 'Rain Water Harvesting',
