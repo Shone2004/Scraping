@@ -71,11 +71,11 @@ const services = [
   },
 {
   id: 7,
-  title: 'Solar Water Heater & SVP',
+  title: 'Solar Water Heater & SPV',
   description:
-    'Energy-efficient solar water heating systems and SVP solutions designed to reduce energy consumption while supporting sustainable water management.',
+    'Energy-efficient solar water heating systems and Solar Photovoltaic (SPV) solutions designed to reduce energy consumption while supporting sustainable water management.',
   image: solarImg,
-  alt: 'Solar water heater and SVP solution',
+  alt: 'Solar water heater and Solar Photovoltaic (SPV) system',
   tag: 'Renewable Energy',
   metrics: ['Solar Powered', 'Energy Saving', 'Eco Friendly'],
 },
