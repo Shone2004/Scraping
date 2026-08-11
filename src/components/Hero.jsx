@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Lock,
   Activity,
+  Recycle,
 } from 'lucide-react';
 import heroBgImage from '../assets/bewhero.png';
 import heroMobileBgImage from '../assets/mobhero.png';
@@ -180,6 +181,19 @@ export default function Hero() {
                 </div>
               </div>
 
+              {/* Recycling & Developer Signature Badge (Desktop) */}
+              <div className="pt-4 flex items-center gap-3">
+                <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-emerald-50 text-emerald-600 shadow-inner ring-4 ring-emerald-50/50">
+                  <Recycle size={18} />
+                </div>
+                <div className="font-serif italic text-base tracking-wide text-gray-600">
+  It's all about recycling{' '}
+  <span className="font-sans font-extrabold not-italic bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text uppercase tracking-wider text-sm ml-0.5">
+    Harshvardhan
+  </span>
+</div>
+              </div>
+
             </div>
 
             {/* Right Column (Keeps the background image completely clear and visible) */}
@@ -291,6 +305,20 @@ export default function Hero() {
                 </div>
               ))}
             </div>
+
+            {/* Recycling & Developer Signature Badge (Mobile) */}
+            <div className="mt-10 pt-6 border-t border-dashed border-gray-200 flex flex-col items-center justify-center text-center">
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 mb-2 shadow-inner ring-4 ring-emerald-50/50">
+                <Recycle size={20} />
+              </div>
+              <div className="font-serif italic text-base tracking-wide text-gray-600">
+  It's all about recycling{' '}
+  <span className="font-sans font-extrabold not-italic bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent uppercase tracking-wider text-sm ml-0.5">
+    Harshvardhan
+  </span>
+</div>
+            </div>
+
           </div>
 
         </div>

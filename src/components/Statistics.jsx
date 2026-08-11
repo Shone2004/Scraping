@@ -8,14 +8,14 @@ import {
 
 const stats = [
   {
-    value: 1000,
+    value: 100000,
     suffix: "+",
     label: "Tons of Plastic Recycled",
     description: "Successfully processed every year",
     icon: Recycle,
   },
   {
-    value: 100,
+    value: 50,
     suffix: "+",
     label: "Industrial Clients",
     description: "Across multiple sectors",
@@ -29,9 +29,9 @@ const stats = [
     icon: ShieldCheck,
   },
   {
-    value: 100,
+    value: 10,
     suffix: "+",
-    label: "Dedicated Professionals",
+    label: "Municipal Corporation",
     description: "Serving nationwide",
     icon: Users,
   },
