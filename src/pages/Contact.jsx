@@ -107,12 +107,14 @@ export default function Contact() {
                 <div className="flex gap-5">
                   <Phone className="text-emerald-600 shrink-0" />
                   <div>
-                    <h4 className="font-semibold">Phone</h4>
+                    <h4 className="font-semibold">Phone / WhatsApp</h4>
                     <a
-                      href="tel:+919876543210"
+                      href="https://wa.me/918806000140?text=Hi%20Verdant%20team,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-500 hover:text-emerald-700 transition-colors"
                     >
-                      +91 98765 43210
+                      +91 88060 00140
                     </a>
                   </div>
                 </div>
