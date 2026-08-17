@@ -19,6 +19,8 @@ import {
   Calendar,
 } from 'lucide-react';
 import aboutBgImage from '../assets/logo.jpeg';
+import ceoImage from '../assets/ceo.jpeg';
+import directorImage from '../assets/director.jpeg';
 
 const coreValues = [
   {
@@ -51,26 +53,22 @@ const scope = [
   { text: 'Advanced recycling and metallurgical refining of e-waste', icon: FlaskConical },
 ];
 
-// Leadership — the two names on the company's own letterhead/business
-// card, carried into the About section so the brand has a face behind it.
 const leadership = [
   {
     name: 'Mukund Vaishnav',
     title: 'Chief Executive Officer',
-    initials: 'MV',
+    image: ceoImage,
+    bio: 'Directing strategic vision, operational scaling, and long-term sustainable growth for the organization.',
   },
   {
     name: 'Harshvardhan Patil',
     title: 'Director',
-    initials: 'HP',
+    image: directorImage,
+    bio: 'Overseeing compliance, industrial partnerships, and technological integration across processing facilities.',
   },
 ];
 
-// The five stages of the closed loop this business actually runs —
-// used to justify a circular diagram instead of a decorative one.
-// `delay` phase-shifts every node along the same orbit path so they
-// stay evenly spaced (72° apart) while continuously revolving.
-const ORBIT_DURATION = 40; // seconds — matches the dashed ring's spin
+const ORBIT_DURATION = 40;
 const loopStages = [
   { label: 'Collect', icon: Truck, top: '8%', left: '50%', delay: '0s' },
   { label: 'Sort', icon: Filter, top: '37%', left: '89.9%', delay: `-${ORBIT_DURATION * 0.2}s` },
@@ -114,7 +112,6 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 bg-white text-[#14231C] relative overflow-hidden">
-      {/* Typography system, scoped to this section */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,440;9..144,560&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
         #about .font-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
@@ -129,10 +126,6 @@ export default function About() {
           animation: about-spin-slow 40s linear infinite;
         }
 
-        /* Traces a circle (12-point polygon approximation) around the
-           center of the loop panel. Every badge uses this same path,
-           phase-shifted via a negative animation-delay, so all five
-           stay evenly spaced while continuously orbiting. */
         @keyframes about-orbit-path {
           0%      { top: 8%;    left: 50%; }
           8.333%  { top: 13.6%; left: 71%; }
@@ -173,45 +166,65 @@ export default function About() {
         }
       `}</style>
 
-      {/* Quiet background accents — two, echoing the closed-loop motif */}
       <div className="absolute -top-24 -left-24 w-[520px] h-[520px] bg-emerald-50 rounded-full blur-[110px] pointer-events-none" />
       <div className="absolute -bottom-32 -right-24 w-[420px] h-[420px] bg-emerald-50/70 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
 
-        {/* Leadership — highlighted banner, leads the section */}
-        <div className="relative rounded-2xl bg-[#0F3D2C] overflow-hidden mb-14">
-          {/* Ambient glow + hairline gold seam, echoing the brand's gold ring motif */}
-          <div className="absolute -top-20 -right-16 w-72 h-72 bg-emerald-400/20 rounded-full blur-[90px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-10 w-64 h-64 bg-[#C9A24B]/10 rounded-full blur-[90px] pointer-events-none" />
+        {/* Leadership Section — Dark Container with Normal/Unfiltered Photos */}
+        <div className="relative rounded-3xl bg-[#0B1E17] overflow-hidden mb-16 p-8 lg:p-12 shadow-2xl border border-white/10">
           <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent" />
 
-          <div className="relative px-7 py-8 lg:px-10 lg:py-9">
-            <div className="flex items-center gap-2 mb-6">
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-4">
               <div className="h-px w-6 bg-[#C9A24B]" />
               <span className="font-label text-[11px] font-medium tracking-[0.22em] text-[#C9A24B] uppercase">
-                Leadership
+                Executive Leadership
               </span>
             </div>
+            
+            <h3 className="font-display text-3xl lg:text-4xl text-white tracking-tight mb-10">
+              The visionaries behind our mission
+            </h3>
 
-            <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {leadership.map((person) => (
                 <div
                   key={person.name}
-                  className="group flex items-center gap-5 rounded-xl border border-white/10 bg-white/[0.04] px-6 py-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.07] hover:border-[#C9A24B]/40"
+                  className="group relative rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-[#C9A24B]/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col"
                 >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C9A24B] to-[#a8843a] flex items-center justify-center shrink-0 shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
-                    <span className="font-display text-xl text-[#0F3D2C] tracking-tight">
-                      {person.initials}
-                    </span>
+                  {/* Large Portrait Image Container with Normal Photo */}
+                  <div className="relative w-full h-80 sm:h-96 overflow-hidden bg-[#091511]">
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    {/* Gradient Fade Over Image for Seamless Text Integration */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E17] via-[#0B1E17]/30 to-transparent" />
+                    
+                    <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full">
+                      <span className="font-label text-[10px] tracking-widest text-[#C9A24B] uppercase">
+                        {person.title}
+                      </span>
+                    </div>
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="font-display text-xl lg:text-2xl text-white tracking-tight truncate">
-                      {person.name}
-                    </h3>
-                    <p className="font-label text-[11px] uppercase tracking-[0.18em] text-[#C9A24B] mt-1.5">
-                      {person.title}
-                    </p>
+
+                  {/* Card Content */}
+                  <div className="p-6 lg:p-8 flex flex-col flex-1 justify-between -mt-12 relative z-10">
+                    <div>
+                      <h4 className="font-display text-2xl lg:text-3xl text-white tracking-tight mb-2 transition-colors duration-300 group-hover:text-[#F3E5AB]">
+                        {person.name}
+                      </h4>
+                      <p className="font-body text-sm text-neutral-300 leading-relaxed mb-6">
+                        {person.bio}
+                      </p>
+                    </div>
+
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-label uppercase tracking-widest text-neutral-400 group-hover:text-[#C9A24B] transition-colors duration-300">
+                      <span>Verdant-Salvage Bharat</span>
+                      <ArrowUpRight size={16} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -241,7 +254,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Credential strip — quiet proof points, not a stats template */}
+        {/* Credential strip */}
         <div className="flex flex-wrap gap-3 mb-16">
           {credentials.map((item) => {
             const ItemIcon = item.icon;
@@ -257,11 +270,10 @@ export default function About() {
           })}
         </div>
 
-        {/* Main Info Grid — asymmetric 5/7 */}
+        {/* Main Info Grid */}
         <div className="grid lg:grid-cols-12 gap-16 items-center mb-20">
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl border border-[#E3E8E3] bg-white overflow-hidden">
-              {/* Faint brand watermark — presence without shouting */}
+            <div className="relative rounded-2xl border border-[#E3E8E3] bg-white overflow-hidden shadow-sm">
               <img
                 src={aboutBgImage}
                 alt=""
@@ -319,17 +331,14 @@ export default function About() {
             </div>
           </div>
 
-          {/* Signature element — the operational loop this company actually runs,
-              with the mark at the hub instead of sitting alone in a box. */}
+          {/* Signature element */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-2xl border border-[#E3E8E3] bg-gradient-to-br from-emerald-50/70 via-white to-white overflow-hidden">
+            <div className="relative rounded-2xl border border-[#E3E8E3] bg-gradient-to-br from-emerald-50/70 via-white to-white overflow-hidden shadow-sm">
               <div className="relative flex items-center justify-center px-6 py-14 lg:py-16">
                 <div className="relative w-full max-w-[380px] aspect-square mx-auto hidden sm:block">
-                  {/* Rotating dashed ring — pure decoration, no text inside it */}
                   <div className="loop-ring absolute inset-[10%] rounded-full border border-dashed border-[#0F6B4C]/25 pointer-events-none" />
                   <div className="absolute inset-[22%] rounded-full bg-emerald-200/25 blur-[50px] pointer-events-none" />
 
-                  {/* Center mark */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <img
                       src={aboutBgImage}
@@ -338,7 +347,6 @@ export default function About() {
                     />
                   </div>
 
-                  {/* Stage nodes — orbit continuously around the ring, staying upright */}
                   {loopStages.map((stage) => {
                     const StageIcon = stage.icon;
                     return (
@@ -358,7 +366,6 @@ export default function About() {
                   })}
                 </div>
 
-                {/* Compact mobile fallback: logo + a simple stage row */}
                 <div className="sm:hidden flex flex-col items-center gap-8 w-full">
                   <img
                     src={aboutBgImage}
@@ -394,7 +401,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Core Values / Pillars — hairline row, revealed on scroll */}
+        {/* Core Values / Pillars */}
         <div ref={pillarsRef} className="mb-20">
           <div className="flex items-end justify-between gap-6 mb-8 border-b border-[#E3E8E3] pb-5">
             <h3 className="font-display text-2xl lg:text-3xl text-[#14231C] tracking-tight">
